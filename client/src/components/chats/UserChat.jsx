@@ -2,6 +2,7 @@ import { useFetchRecipientUser } from "../../hooks/useFetchRecipient";
 import avatar from "../../assets/account1.png"
 import { useContext } from "react";
 import { ChatContext } from "../../context/ChatContext";
+
 const UserChat = ({chat,user}) => {
     const {recipientUser} = useFetchRecipientUser(chat,user)
     const {onlineUsers, newMessage} = useContext(ChatContext);
@@ -10,7 +11,7 @@ const UserChat = ({chat,user}) => {
     ?"user-online" 
     : ""
 
-    console.log(recipientUser);
+    console.log("Check recipient user",recipientUser);
     return ( 
     <div>
         <ul className="flex flex-col user-card p-2 justify-between">

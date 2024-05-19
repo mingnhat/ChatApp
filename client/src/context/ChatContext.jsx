@@ -18,6 +18,7 @@ export const ChatContextProvider = ({children, user}) => {
     const [newMessage, setNewMessage] = useState(null)
     const [socket, setSocket]=useState((null))
     const [onlineUsers, setOnlineUsers] = useState([])
+    const [notification, setNotification] = useState([])
 
     console.log("OnlineUser",onlineUsers)
 

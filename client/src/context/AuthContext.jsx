@@ -23,11 +23,10 @@ export const AuthContextProvider = ({children}) => {
         password:"",
     });
     console.log("User",user);
-    console.log("LoginInfor",loginInfo);
 
     useEffect(()=>{
         const user = localStorage.getItem("User");
-
+         
         setUser(JSON.parse(user));
     },[])
 
